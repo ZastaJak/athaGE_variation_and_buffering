@@ -1,0 +1,14 @@
+## Trim the <SRR> files
+java -jar Trimmomatic-0.39/trimmomatic-0.39.jar PE -phred33 <SRR>_1.fastq <SRR>_2.fastq trimmed_SRR_fp.fasta trimmed_SRR_fu.fasta trimmed_SRR_rp.fasta trimmed_SRR_ru.fasta ILLUMINACLIP:Trimmomatic-0.39/adapters/<merged_adapters>.fa:2:30:10 HEADCROP:6 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+
+## Perform the alignment
+bismark --bowtie2 -N 1 -L 20 --multicore 8 -score_min L,0,-0.6 -o ./bam BismarkGenomePreparation/ -1 trimmed_SRR_fp.fasta -2 trimmed_SRR_rp.fasta
+
+## SAM needs to be converted to BAM
+samtools view -h -o aligned.sam ./bam/trimmed_SRR_fp.fasta_bismark_bt2_pe.bam
+
+## Deduplicate reads
+deduplicate_bismark -p aligned.sam 
+
+## Extract cytosine data (.CX report)
+bismark_methylation_extractor --bedGraph --multicore 8 --CX --cytosine_report --genome_folder BismarkGenomePreparation/ aligned.deduplicated.sam
