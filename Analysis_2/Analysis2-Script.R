@@ -199,22 +199,6 @@ pivoted_means_1[,6]<-factor(pivoted_means_1[,6], levels = c("gbM", "Transposable
 
 ## 1. Mean vs Mean
 
-mean_wilcox<-signif(unlist(wilcox.test(unlist(ttibble2_means[,29]), unlist(ttibble2_means[,30]))[3]))
-pivoted_means_hist<-pivot_longer(ttibble2_means[,c(1,29, 30)], c(DM, HLM))
-hist_means<-ggplot(pivoted_means_hist, aes(x=value, color = name, fill = name)) + 
-  geom_histogram(position="identity", alpha=0.5, bins = 100) +
-  geom_vline(xintercept = 8.4, "dashed")+
-  geom_vline(xintercept = 12.05, "dashed")+
-  ggtitle('Gene expression mean') +
-  annotation_custom(grobTree(textGrob(paste0("P-value equals ", signif(mean_wilcox, 4)), x=0.20,  y=0.95, hjust=0, gp=gpar(col="black", fontsize=13))))+
-  annotation_custom(grobTree(textGrob("h = 8.4", x=0.05,  y=0.9, hjust=0, gp=gpar(col="black", fontsize=13)))) +
-  annotation_custom(grobTree(textGrob("h = 12.05", x=0.55,  y=0.9, hjust=0, gp=gpar(col="black", fontsize=13)))) +
-  theme(axis.text.x = element_text(size = 13.5), 
-        axis.text.y = element_text(size = 15),
-        text = element_text(size = 15))
-
-
-
 pivoted_means_0<-pivoted_means_1 %>% mutate(state = ifelse(Mean_Epi > 0.1,"Methylated","Non-Methylated"))
 
 ## Create a function to categorise inputs for drought
@@ -525,7 +509,6 @@ dir.create("plots")
 setwd("plots")
 ggsave(joined_CV_mean, filename = "joined_CV_mean.png", width = 10, height = 10, device = "png", scale = 1.5)
 ggsave(p_MVM, filename = "joined_mean_mean.png", width = 10, height = 10, device = "png", scale = 1.5)
-ggsave(hist_means, filename = "plot_hist_means.png", units = "mm", width = 150, height = 60, scale = 3)
 setwd("../")
 
 
