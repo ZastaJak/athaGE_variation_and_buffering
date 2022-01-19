@@ -1,0 +1,108 @@
+﻿GO biological process complete,background.txt - REFLIST (12524),nonvar_nonmet.txt (5453),nonvar_nonmet.txt (expected),nonvar_nonmet.txt (over/under),nonvar_nonmet.txt (fold Enrichment),nonvar_nonmet.txt (raw P-value),nonvar_nonmet.txt (FDR)
+"regulation of transcription, DNA-templated (GO:0006355)",1362,711,593.02,+,1.2,3.84E-05,3.92E-03
+regulation of nucleic acid-templated transcription (GO:1903506),1362,711,593.02,+,1.2,3.84E-05,3.85E-03
+regulation of RNA biosynthetic process (GO:2001141),1364,712,593.89,+,1.2,3.49E-05,3.70E-03
+regulation of macromolecule biosynthetic process (GO:0010556),1482,769,645.27,+,1.19,3.06E-05,3.43E-03
+regulation of cellular macromolecule biosynthetic process (GO:2000112),1476,765,642.66,+,1.19,3.30E-05,3.63E-03
+regulation of cellular biosynthetic process (GO:0031326),1562,804,680.1,+,1.18,4.05E-05,3.98E-03
+regulation of biosynthetic process (GO:0009889),1587,814,690.99,+,1.18,5.01E-05,4.61E-03
+regulation of RNA metabolic process (GO:0051252),1428,729,621.76,+,1.17,2.19E-04,1.54E-02
+regulation of nucleobase-containing compound metabolic process (GO:0019219),1466,739,638.3,+,1.16,5.85E-04,3.25E-02
+cellular process (GO:0009987),7390,2825,3217.64,-,0.88,4.20E-19,3.37E-16
+response to stress (GO:0006950),2110,785,918.7,-,0.85,3.65E-05,3.79E-03
+organonitrogen compound metabolic process (GO:1901564),2736,986,1191.27,-,0.83,7.97E-09,2.13E-06
+cellular protein metabolic process (GO:0044267),1948,699,848.17,-,0.82,1.69E-06,2.71E-04
+protein metabolic process (GO:0019538),2042,731,889.1,-,0.82,6.08E-07,1.22E-04
+metabolic process (GO:0008152),5111,1827,2225.35,-,0.82,1.56E-20,1.75E-17
+localization (GO:0051179),1519,541,661.38,-,0.82,1.66E-05,2.03E-03
+cellular component organization or biogenesis (GO:0071840),1867,661,812.9,-,0.81,6.56E-07,1.27E-04
+cellular metabolic process (GO:0044237),4726,1658,2057.72,-,0.81,2.09E-21,2.93E-18
+transport (GO:0006810),1372,481,597.37,-,0.81,1.35E-05,1.72E-03
+establishment of localization (GO:0051234),1407,493,612.61,-,0.8,9.17E-06,1.29E-03
+gene expression (GO:0010467),885,308,385.33,-,0.8,4.27E-04,2.61E-02
+organic substance metabolic process (GO:0071704),4773,1660,2078.18,-,0.8,3.22E-23,1.81E-19
+catabolic process (GO:0009056),950,329,413.63,-,0.8,1.72E-04,1.25E-02
+cellular macromolecule metabolic process (GO:0044260),2612,904,1137.28,-,0.79,1.90E-11,7.10E-09
+primary metabolic process (GO:0044238),4320,1479,1880.95,-,0.79,1.16E-22,3.25E-19
+organic acid metabolic process (GO:0006082),693,237,301.73,-,0.79,8.54E-04,4.52E-02
+cellular component organization (GO:0016043),1643,559,715.37,-,0.78,5.07E-08,1.29E-05
+small molecule metabolic process (GO:0044281),1034,351,450.21,-,0.78,2.31E-05,2.75E-03
+organic substance catabolic process (GO:1901575),856,289,372.71,-,0.78,8.77E-05,7.58E-03
+oxoacid metabolic process (GO:0043436),670,225,291.72,-,0.77,4.52E-04,2.70E-02
+nitrogen compound metabolic process (GO:0006807),3702,1235,1611.87,-,0.77,5.19E-22,9.71E-19
+macromolecule metabolic process (GO:0043170),3275,1090,1425.95,-,0.76,3.27E-19,3.06E-16
+macromolecule localization (GO:0033036),566,186,246.44,-,0.75,5.66E-04,3.21E-02
+protein modification process (GO:0036211),1482,487,645.27,-,0.75,6.62E-09,1.96E-06
+cellular protein modification process (GO:0006464),1482,487,645.27,-,0.75,6.62E-09,1.86E-06
+macromolecule catabolic process (GO:0009057),540,176,235.12,-,0.75,5.67E-04,3.18E-02
+nitrogen compound transport (GO:0071705),528,172,229.89,-,0.75,6.71E-04,3.69E-02
+cellular nitrogen compound metabolic process (GO:0034641),1748,566,761.09,-,0.74,2.53E-11,8.37E-09
+phosphorus metabolic process (GO:0006793),1074,345,467.62,-,0.74,1.86E-07,4.18E-05
+cellular catabolic process (GO:0044248),797,256,347.02,-,0.74,9.48E-06,1.30E-03
+phosphate-containing compound metabolic process (GO:0006796),1043,331,454.13,-,0.73,1.03E-07,2.42E-05
+negative regulation of metabolic process (GO:0009892),439,139,191.14,-,0.73,7.73E-04,4.17E-02
+carboxylic acid metabolic process (GO:0019752),606,191,263.85,-,0.72,4.82E-05,4.59E-03
+negative regulation of macromolecule metabolic process (GO:0010605),404,127,175.9,-,0.72,9.36E-04,4.91E-02
+proteolysis (GO:0006508),468,147,203.77,-,0.72,3.50E-04,2.26E-02
+macromolecule modification (GO:0043412),1713,538,745.85,-,0.72,5.25E-13,2.11E-10
+phosphorylation (GO:0016310),634,199,276.05,-,0.72,2.54E-05,2.97E-03
+organonitrogen compound catabolic process (GO:1901565),507,159,220.75,-,0.72,1.82E-04,1.30E-02
+cellular macromolecule localization (GO:0070727),406,125,176.77,-,0.71,4.60E-04,2.72E-02
+protein phosphorylation (GO:0006468),562,173,244.7,-,0.71,3.39E-05,3.66E-03
+cellular protein catabolic process (GO:0044257),352,107,153.26,-,0.7,8.11E-04,4.34E-02
+cellular protein localization (GO:0034613),378,114,164.58,-,0.69,4.04E-04,2.49E-02
+protein catabolic process (GO:0030163),368,110,160.23,-,0.69,3.36E-04,2.22E-02
+organelle organization (GO:0006996),1153,342,502.02,-,0.68,2.31E-11,8.11E-09
+protein localization (GO:0008104),425,126,185.05,-,0.68,9.01E-05,7.67E-03
+cellular macromolecule catabolic process (GO:0044265),448,132,195.06,-,0.68,4.21E-05,4.08E-03
+cellular localization (GO:0051641),605,178,263.42,-,0.68,1.43E-06,2.44E-04
+organic cyclic compound metabolic process (GO:1901360),1648,481,717.55,-,0.67,2.73E-17,1.40E-14
+cellular aromatic compound metabolic process (GO:0006725),1589,462,691.86,-,0.67,6.05E-17,2.83E-14
+modification-dependent protein catabolic process (GO:0019941),304,88,132.36,-,0.66,5.54E-04,3.21E-02
+intracellular protein transport (GO:0006886),312,90,135.85,-,0.66,3.54E-04,2.21E-02
+regulation of response to stress (GO:0080134),295,85,128.44,-,0.66,5.62E-04,3.22E-02
+modification-dependent macromolecule catabolic process (GO:0043632),310,89,134.98,-,0.66,3.35E-04,2.24E-02
+establishment of protein localization (GO:0045184),349,99,151.96,-,0.65,9.13E-05,7.65E-03
+heterocycle metabolic process (GO:0046483),1508,427,656.59,-,0.65,9.19E-18,5.73E-15
+ubiquitin-dependent protein catabolic process (GO:0006511),301,85,131.06,-,0.65,2.65E-04,1.81E-02
+protein transport (GO:0015031),342,96,148.91,-,0.64,7.62E-05,6.68E-03
+vesicle-mediated transport (GO:0016192),295,81,128.44,-,0.63,1.39E-04,1.05E-02
+nucleobase-containing compound metabolic process (GO:0006139),1298,349,565.15,-,0.62,2.80E-18,1.97E-15
+cellular amino acid metabolic process (GO:0006520),268,72,116.69,-,0.62,1.66E-04,1.23E-02
+establishment of localization in cell (GO:0051649),484,129,210.74,-,0.61,1.94E-07,4.18E-05
+peptidyl-amino acid modification (GO:0018193),254,67,110.59,-,0.61,1.40E-04,1.04E-02
+intracellular transport (GO:0046907),448,118,195.06,-,0.6,2.92E-07,6.08E-05
+DNA metabolic process (GO:0006259),295,75,128.44,-,0.58,1.30E-05,1.69E-03
+nucleic acid metabolic process (GO:0090304),1052,267,458.05,-,0.58,1.11E-17,6.25E-15
+RNA metabolic process (GO:0016070),784,195,341.36,-,0.57,4.60E-14,1.99E-11
+ncRNA metabolic process (GO:0034660),250,62,108.85,-,0.57,2.95E-05,3.39E-03
+cellular response to DNA damage stimulus (GO:0006974),242,60,105.37,-,0.57,4.91E-05,4.60E-03
+DNA repair (GO:0006281),212,52,92.31,-,0.56,1.12E-04,8.61E-03
+RNA processing (GO:0006396),447,107,194.63,-,0.55,2.80E-09,8.72E-07
+chromosome organization (GO:0051276),337,78,146.73,-,0.53,7.68E-08,1.87E-05
+negative regulation of gene expression (GO:0010629),192,44,83.6,-,0.53,5.92E-05,5.36E-03
+mRNA metabolic process (GO:0016071),261,58,113.64,-,0.51,7.60E-07,1.33E-04
+RNA modification (GO:0009451),203,43,88.39,-,0.49,4.83E-06,7.53E-04
+chromatin organization (GO:0006325),213,43,92.74,-,0.46,6.89E-07,1.29E-04
+mRNA processing (GO:0006397),165,33,71.84,-,0.46,1.16E-05,1.56E-03
+macromolecule methylation (GO:0043414),106,21,46.15,-,0.46,4.49E-04,2.71E-02
+covalent chromatin modification (GO:0016569),114,21,49.64,-,0.42,1.01E-04,7.98E-03
+histone modification (GO:0016570),110,20,47.89,-,0.42,1.11E-04,8.65E-03
+tRNA metabolic process (GO:0006399),95,17,41.36,-,0.41,2.74E-04,1.85E-02
+"mRNA splicing, via spliceosome (GO:0000398)",104,18,45.28,-,0.4,9.78E-05,7.85E-03
+RNA splicing (GO:0008380),163,28,70.97,-,0.39,6.91E-07,1.25E-04
+"RNA splicing, via transesterification reactions with bulged adenosine as nucleophile (GO:0000377)",130,22,56.6,-,0.39,7.47E-06,1.10E-03
+"RNA splicing, via transesterification reactions (GO:0000375)",130,22,56.6,-,0.39,7.47E-06,1.08E-03
+gene silencing (GO:0016458),116,18,50.51,-,0.36,7.04E-06,1.07E-03
+movement of cell or subcellular component (GO:0006928),68,10,29.61,-,0.34,4.62E-04,2.70E-02
+protein acylation (GO:0043543),61,8,26.56,-,0.3,3.38E-04,2.21E-02
+posttranscriptional gene silencing (GO:0016441),64,7,27.87,-,0.25,7.42E-05,6.61E-03
+gene silencing by RNA (GO:0031047),82,8,35.7,-,0.22,1.45E-06,2.40E-04
+tRNA aminoacylation (GO:0043039),40,3,17.42,-,0.17,3.53E-04,2.25E-02
+amino acid activation (GO:0043038),40,3,17.42,-,0.17,3.53E-04,2.23E-02
+post-transcriptional gene silencing by RNA (GO:0035194),56,4,24.38,-,0.16,1.39E-05,1.74E-03
+dsRNA processing (GO:0031050),44,3,19.16,-,0.16,9.50E-05,7.84E-03
+production of small RNA involved in gene silencing by RNA (GO:0070918),44,3,19.16,-,0.16,9.50E-05,7.73E-03
+mitochondrial gene expression (GO:0140053),33,2,14.37,-,0.14,6.71E-04,3.66E-02
+tRNA aminoacylation for protein translation (GO:0006418),38,2,16.55,-,0.12,1.82E-04,1.31E-02
+regulation of RNA splicing (GO:0043484),24,0,10.45,-, < 0.01,2.20E-04,1.53E-02

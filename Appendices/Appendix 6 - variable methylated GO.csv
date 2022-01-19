@@ -1,0 +1,6 @@
+﻿GO biological process complete,background.txt - REFLIST (12524),var_met.txt (94),var_met.txt (expected),var_met.txt (over/under),var_met.txt (fold Enrichment),var_met.txt (raw P-value),var_met.txt (FDR)
+response to organonitrogen compound (GO:0010243),102,7,0.77,+,9.14,1.63E-05,3.05E-02
+response to nitrogen compound (GO:1901698),146,8,1.1,+,7.3,1.88E-05,2.64E-02
+regulation of defense response (GO:0031347),205,10,1.54,+,6.5,4.35E-06,1.22E-02
+regulation of response to stress (GO:0080134),295,13,2.21,+,5.87,4.33E-07,2.43E-03
+response to chemical (GO:0042221),1729,29,12.98,+,2.23,2.98E-05,3.35E-02
