@@ -199,6 +199,7 @@ pivoted_means_1[,6]<-factor(pivoted_means_1[,6], levels = c("gbM", "Transposable
 
 ## 1. Mean vs Mean
 
+
 pivoted_means_0<-pivoted_means_1 %>% mutate(state = ifelse(Mean_Epi > 0.1,"Methylated","Non-Methylated"))
 
 ## Create a function to categorise inputs for drought
@@ -992,7 +993,7 @@ dir.create("met_profiles")
 setwd("met_profiles")
 
 ## Merge the plots into a single figure
-allplot<-(((coverageplot | correlationplot_CG) / (correlationplot_CHG | correlationplot_CHH)) | profileplot_CG) / (profileplot_CHG | profileplot_CHH) + plot_layout(guides = 'collect')
+allplot<- ((profileplot_CG | profileplot_CHG) / (profileplot_CHH | (correlationplot_CG | correlationplot_CHG) / (correlationplot_CHH | coverageplot))) + plot_layout(guides = 'collect')
 
 ggsave(allplot, filename = "base_analysis_plots.png", width = 10, height = 10, device = "png", scale = 1.5)
 
