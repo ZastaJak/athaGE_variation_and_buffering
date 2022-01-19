@@ -788,6 +788,48 @@ quantile(unlist(ttibble2_means[,29]), c(0.1, 0.25, 0.5, 0.75, 0.9, 1))
 quantile(unlist(ttibble2_means[,30]), c(0.1, 0.25, 0.5, 0.75, 0.9, 1))
 
 
+## Draw and save the plot comparing CV and means for DM and HLM
+DM_comparison<-tibble(ttibble2_means[,29], ttibble2_CV[,29], .name_repair = "unique")
+HLM_comparison<-tibble(ttibble2_means[,30], ttibble2_CV[,30], .name_repair = "unique")
+names(DM_comparison)<-c("mean", "CV")
+names(HLM_comparison)<-c("mean", "CV")
+
+DM_comparison<- DM_comparison %>% mutate(`CV value`=cut(CV,breaks=c(-1, 0.01, 0.02, 0.03, 0.04, 0.05,
+                                                                    0.06, 0.07, 0.08, 0.09, 0.10, 0.20, max(CV,na.rm=T)),
+                                                        labels=c("0-0.01","0.01-0.02","0.02-0.03","0.03-0.04",
+                                                                 "0.04-0.05","0.05-0.06","0.06-0.07","0.07-0.08","0.08-0.09",
+                                                                 "0.09-0.10", "0.10-0.20", ">0.20"))) %>%
+  mutate(`CV value`=factor(as.character(`CV value`),levels=rev(levels(`CV value`))))
+
+HLM_comparison<- HLM_comparison %>% mutate(`CV value`=cut(CV,breaks=c(-1, 0.01, 0.02, 0.03, 0.04, 0.05,
+                                                                      0.06, 0.07, 0.08, 0.09, 0.10, 0.20, max(CV,na.rm=T)),
+                                                          labels=c("0-0.01","0.01-0.02","0.02-0.03","0.03-0.04",
+                                                                   "0.04-0.05","0.05-0.06","0.06-0.07","0.07-0.08","0.08-0.09",
+                                                                   "0.09-0.10", "0.10-0.20", ">0.20"))) %>%
+  mutate(`CV value`=factor(as.character(`CV value`),levels=rev(levels(`CV value`))))
+
+DM_comparison_plot<-ggplot(DM_comparison, aes(mean, CV, colour = `CV value`)) +
+  geom_point(size=1) +
+  scale_colour_manual(values=rev(viridis(20))[c(2:8,14,16,18,20)]) +
+  xlim(c(7.5, 16.5)) +
+  ylim(c(0, 0.18)) +
+  geom_hline(yintercept = 0.04, "dashed") +
+  theme(axis.text.x = element_text(size = 16), 
+        axis.text.y = element_text(size = 16),
+        text = element_text(size = 15))
+HLM_comparison_plot<-ggplot(HLM_comparison, aes(mean, CV, colour = `CV value`)) +
+  geom_point(size=1) +
+  scale_colour_manual(values=rev(viridis(20))[c(2:8,14,16,18,20)]) +
+  xlim(c(7.5, 16.5)) +
+  ylim(c(0, 0.18)) +
+  geom_hline(yintercept = 0.04, "dashed") +
+  theme(axis.text.x = element_text(size = 16), 
+        axis.text.y = element_text(size = 16),
+        text = element_text(size = 15))
+complot<-(HLM_comparison_plot | DM_comparison_plot)  + plot_layout(guides = 'collect')
+ggsave(complot, filename = "ComparisonPlot.png", device = "png", units = "mm", width = 150, height = 70, scale = 2.75)
+
+
 ##
 ## Heatmaps
 ##
@@ -851,16 +893,16 @@ for(i in c("ttible2_0.04_Hili_alone", 'ttible2_0.04_Dro_alone', 'ttible2_totaldr
   assign(paste0(i,"_test_plot"), ggplot(molten_tibble, aes(variable, genename, fill= CV)) + 
            geom_tile() +
            guides(colour = guide_colourbar(barheight = unit(30, "cm"))) +
-           theme(axis.text.x = element_text(size = 19, angle = 270), 
+           theme(axis.text.x = element_text(size = 25, angle = 270), 
                  legend.key.height = unit(2.5, "cm"),
                  axis.text.y = element_blank(),
                  axis.title.y = element_blank(),
                  axis.ticks.y = element_blank(),
                  axis.line.y = element_blank(),
-                 text = element_text(size = 15),
-                 axis.title.x = element_text(size = 19),
-                 legend.text = element_text(size = 15),
-                 legend.title = element_text(size = 15)) +
+                 text = element_text(size = 19),
+                 axis.title.x = element_text(size = 20),
+                 legend.text = element_text(size = 19),
+                 legend.title = element_text(size = 19)) +
            xlab("Measurement") +
            scale_fill_manual(values=rev(viridis(20))[c(1:8,14,16,18,20)]))
   
@@ -870,7 +912,7 @@ for(i in c("ttible2_0.04_Hili_alone", 'ttible2_0.04_Dro_alone', 'ttible2_totaldr
   ## Generate new grid page
   grid.newpage()
   ## Align dendrogram...
-  print(dendro_plot, vp = viewport(x = 0.440, y = 0.9, width = 0.920, height = 0.15))
+  print(dendro_plot, vp = viewport(x = 0.430, y = 0.9, width = 0.89, height = 0.15))
   ## And the heatmap.
   ## These x and y values were entered by hand - changing number of columns can result in dendrogram not aligned to heatmap
   print(get(paste0(i,"_test_plot")), vp = viewport(x = 0.5, y = 0.45, width = 1.0, height = 0.87))
@@ -906,23 +948,23 @@ for(i in c('ttible2_0.04_Both', 'ttible2_arranged')){
   assign(paste0(i,"_test_plot"), ggplot(molten_tibble, aes(variable, genename, fill= CV)) + 
            geom_tile() +
            guides(colour = guide_colourbar(barheight = unit(30, "cm"))) +
-           theme(axis.text.x = element_text(size = 19, angle = 270), 
+           theme(axis.text.x = element_text(size = 25, angle = 270), 
                  legend.key.height = unit(2.5, "cm"),
                  axis.text.y = element_blank(),
                  axis.title.y = element_blank(),
                  axis.ticks.y = element_blank(),
                  axis.line.y = element_blank(),
-                 text = element_text(size = 15),
-                 axis.title.x = element_text(size = 19),
-                 legend.text = element_text(size = 15),
-                 legend.title = element_text(size = 15)) +
+                 text = element_text(size = 19),
+                 axis.title.x = element_text(size = 20),
+                 legend.text = element_text(size = 19),
+                 legend.title = element_text(size = 19)) +
            xlab("Measurement") +
            scale_fill_manual(values=rev(viridis(20))[c(1:8,14,16,18,20)]))
   
   ## Here, the plot is "wide", meaning it is sized for all timepoints, and not only drought or highlight
   png(filename = paste0(i, "_CV_wide.png"), width = 2000, height = 1080, units = "px")
   grid.newpage()
-  print(dendro_plot, vp = viewport(x = 0.471, y = 0.9, width = 1.003, height = 0.15))
+  print(dendro_plot, vp = viewport(x = 0.465, y = 0.9, width = 0.99, height = 0.15))
   print(get(paste0(i,"_test_plot")), vp = viewport(x = 0.5, y = 0.45, width = 1.00, height = 0.87))
   dev.off()
 }
